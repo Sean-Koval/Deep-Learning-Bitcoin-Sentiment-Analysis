@@ -1,0 +1,20 @@
+# Steps to setup the lambda and image to collect twitter data 
+
+1) Create the .py file, Dockerfile, and requirments.txt file
+2) Build the docker image locally to test
+3) Run the docker image locally (make sure you have IAM role permissions attached to instance: edit the ~/.aws/config file)
+4) Ping the endpoint to see if it worked
+
+Commands:
+
+# build command
+docker build -t app:latest .
+
+# run command
+# only need this stuff for local (dont need to pass -v or -p)
+docker run -p 9000:8080 -v $HOME/.aws:/root/.aws app:latest
+
+# curl (for invoking)
+curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+
+# TESTED AND WORKING!
