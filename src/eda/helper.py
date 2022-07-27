@@ -1,3 +1,6 @@
+# ssh from vscode into instnce
+# ssh ubuntu@ec2-184-72-196-52.compute-1.amazonaws.com
+
 
 ### Getting tweet volume count
 import tweepy
