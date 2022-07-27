@@ -3,7 +3,7 @@ Repository containing work for w251 final project. The project is in regards to 
 
 
 #  Architecture
-![Alt Text](images/aws_deep_learning_arch.png)
+![Alt Text](images/aws_arch.png)
 
 #### Data Pipeline
 
