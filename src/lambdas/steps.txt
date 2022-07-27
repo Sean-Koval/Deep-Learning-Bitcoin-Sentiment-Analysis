@@ -18,3 +18,20 @@ docker run -p 9000:8080 -v $HOME/.aws:/root/.aws app:latest
 curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
 
 # TESTED AND WORKING!
+
+
+# Steps for Kinesis
+
+1) Setup PUT kinesis stream (firehose)
+2) Create a test lambda (that prints some bytes to stream)
+3) Test using lambda in the UI
+4) Look at the data stream of the kineses object
+5) If you see data it worked! (should be able to move to testing storage in s3)
+6) If this all works then the kinesis PUT stream should be all setup
+
+# Setup Lambdas (general)
+
+1) Create a test one in the UI and give permissions to write to the stream or to s3
+2) test it
+3) Abstract the lambda python code to Dockerfile
+4) Test the dockerfile locally first (then move to a lambda fn)
